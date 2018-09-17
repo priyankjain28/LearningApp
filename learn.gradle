@@ -1,0 +1,25 @@
+def versions = [
+        supportLib      : '27.1.1',
+        constraintLayout: '1.1.0',
+        timber          : '4.6.0',
+        room            : '1.0.0',
+        roomExtensions  : '1.1.0',
+]
+
+ext.versions = versions
+
+ext.learn = [
+        support    : [
+                appcompat       : 'com.android.support:appcompat-v7:' + versions.supportLib,
+                constraintLayout: 'com.android.support.constraint:constraint-layout:' + versions.constraintLayout,
+                recyclerview    : 'com.android.support:recyclerview-v7:' + versions.supportLib,
+                cardview        : 'com.android.support:cardview-v7:' + versions.supportLib,
+                design          : 'com.android.support:design:' + versions.supportLib,
+        ],
+        room       : [
+                core               : 'android.arch.persistence.room:runtime:' + versions.room,
+                compiler           : 'android.arch.persistence.room:compiler:' + versions.room,
+                lifecycleExtensions: 'android.arch.lifecycle:extensions:' + versions.roomExtensions,
+        ],
+        timber     : 'com.jakewharton.timber:timber:' + versions.timber,
+]

@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.peeru.labs.learningapp"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation learn.support.appcompat
+    implementation learn.support.constraintLayout
+    implementation learn.support.cardview
+    implementation learn.support.recyclerview
+    implementation learn.support.design
+
+    //TODO 2 :: ADD ROOM & LIFECYCLE EXTENSIONS
+    //Room, LiveData and ViewModel
+    implementation learn.room.core
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    annotationProcessor learn.room.compiler
+    implementation learn.room.lifecycleExtensions
+
+    //Timber - Logs
+    implementation learn.timber
+    implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha04'
+    implementation 'android.arch.navigation:navigation-ui:1.0.0-alpha04'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+}
