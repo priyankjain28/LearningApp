@@ -53,7 +53,6 @@ public class LetterListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_learn, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.recyclerview_letters);
         recyclerView.setAdapter(letterListAdapter);
-        //recyclerView.addItemDecoration(new DividerItemDecoration(context, DividerItemDecoration.VERTICAL));
         recyclerView.setLayoutManager(new GridLayoutManager(context,2, GridLayoutManager.VERTICAL, false));
         return view;
     }
@@ -90,6 +89,7 @@ public class LetterListFragment extends Fragment {
             }
         }
         letterListAdapter.setLetterList(letters,wordList);
+        letterListAdapter.notifyDataSetChanged();
     }
 
     public void removeData() {

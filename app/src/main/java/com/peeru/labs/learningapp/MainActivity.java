@@ -11,8 +11,6 @@ import android.view.MenuItem;
 import com.peeru.labs.learningapp.ui.learn.LetterListFragment;
 import com.peeru.labs.learningapp.ui.profile.ProfileFragment;
 
-//Director - Letter
-//Movies - Word
 public class MainActivity extends AppCompatActivity {
     private boolean LEARN_SHOWN = true;
     private Fragment shownFragment;
@@ -21,19 +19,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //setToolbar(getString(R.string.app_name));
         initView();
-
         if (savedInstanceState ==   null) {
             showFragment(LetterListFragment.newInstance());
         }
     }
 
-   /* public void setToolbar(@NonNull String title) {
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle(title);
-        setSupportActionBar(toolbar);
-    }*/
     private void initView() {
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

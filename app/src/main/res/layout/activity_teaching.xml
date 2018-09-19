@@ -16,7 +16,7 @@
     <TextView
         android:id="@+id/textView"
         android:layout_below="@+id/imgView"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Hello Ankita!"
         android:textSize="28sp"
@@ -24,4 +24,14 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:textColor="@color/card"/>
+    <ImageButton
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:src="@drawable/ic_media_play"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:background="@android:color/holo_green_dark"
+        android:text="Play"/>
 </RelativeLayout>

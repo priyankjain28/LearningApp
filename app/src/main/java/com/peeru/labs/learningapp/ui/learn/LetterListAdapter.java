@@ -67,7 +67,7 @@ public class LetterListAdapter extends RecyclerView.Adapter<LetterListAdapter.Le
                 }
             });
             holder.module.setText("Module "+(counter++));
-            if(wordList != null) {
+            if(wordList.get(letter.id) != null) {
                 for (int i = 0; i < wordList.get(letter.id).size(); i++) {
                     View line = new View(context);
                     LinearLayout.LayoutParams lineParams = new LinearLayout.LayoutParams(100, 10);
